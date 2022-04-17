@@ -105,14 +105,51 @@
 
 // 6.daxil edilen ededin faktorialini hesablayan proqram yazin
 
-let num=parseInt(prompt("eded daxil edin"))
-let fackt=1
-for(let i=1; i <= num; i++){
-    fackt = fackt * i
+// let num=parseInt(prompt("eded daxil edin"))
+// let fackt=1
+// for(let i=1; i <= num; i++){
+//     fackt = fackt * i
     
 
+// }
+// alert(fackt)
+
+
+
+
+// 7.asagdaki f(x, y) funksiyasini daxil edilen x ve y ededleri ucun hesablayan proqram yazin
+// x>0, y<0 olarsa f(x,y)=4x+2y+4
+// x>0, y=0 olarsa f(x,y)=2x-y+3
+// x<0, y>0 olarsa f(x,y)=3x+4y+3
+
+
+// let x = parseInt(prompt("x"))
+// let y= parseInt(prompt("y"))
+// if(x>0 && y<0){
+//     let f1=4 * x + 2 * y + 4
+//     alert(`f1(${x},${y})=4x+2y+4=${f1}`)
+// }else if(x>0 && y==0){
+//     let f2=2 * x - y + 3
+//     alert(`f2(${x},${y})=2x-y+3=${f2}`)
+// }else if(x<0 && y>0){
+//     let f3=3 * x + 4 * y + 3
+//     alert(`f3(${x},${y})=3x+4y+3=${f3}`)
+// }
+
+
+
+
+// 8.vurma cedvelini gosteren bir proqram yaz
+
+let vurmaCedveli=""
+for(let i=1; i<=10; i++){
+    for(let j=1; j<=10; j++){
+        vurmaCedveli+= + i + "*" + j + "=" + (i*j) + "\t"
+    }
+    console.log(vurmaCedveli)
+    vurmaCedveli=""
 }
-alert(fackt)
+
 
 
 
