@@ -141,13 +141,40 @@
 
 // 8.vurma cedvelini gosteren bir proqram yaz
 
-let vurmaCedveli=""
-for(let i=1; i<=10; i++){
-    for(let j=1; j<=10; j++){
-        vurmaCedveli+= + i + "*" + j + "=" + (i*j) + "\t"
-    }
-    console.log(vurmaCedveli)
-    vurmaCedveli=""
+// let vurmaCedveli=""
+// for(let i=1; i<=10; i++){
+//     for(let j=1; j<=10; j++){
+//         vurmaCedveli+= + i + "*" + j + "=" + (i*j) + "\t"
+//     }
+//     console.log(vurmaCedveli)
+//     vurmaCedveli=""
+// }
+
+
+
+
+
+// 9. sistem 100-e  qeder tesadufu bir eded verir.istifadeci bu ededi tapmaga calisir ve proqram istifadeciye daxil etdiyi cavbi
+// azalt ve ya artir  deyerek komek edir.cavabi tapdigda ise nece defe cehd etdikden sonra tapdigini gosterir
+
+let num=Math.floor(Math.random()*100);
+alert(num);
+let user=parseInt(prompt("eded daxil edin:"));
+let cehd=1
+while(true){
+    if(num>user){
+        alert("artirin")
+        user=parseInt(prompt("yeniden eded daxil edin:"));
+        cehd+=1
+    }else if(num<user){
+        alert("azaldin")
+        user=parseInt(prompt("yeniden eded daxil edin:"));
+        cehd+=1
+    }else if(num==user){
+        alert("tebrikler dogru cavabi tapdiniz")
+        alert(cehd)
+        break
+}
 }
 
 
