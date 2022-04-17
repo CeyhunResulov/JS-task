@@ -56,15 +56,15 @@
 // 4.butun donguler ile adinizi ekrana 5 defe yazdirin
 
 
-let ad="Ceyhun"
+// let ad="Ceyhun"
 
 
-// 1.
+// i.
 // for(let i=0; i < 5; i++){
 //     console.log(ad)
 // }
 
-// 2.
+// ii.
 // let i=0
 // while(i<5){
 //     console.log(ad)
@@ -72,7 +72,7 @@ let ad="Ceyhun"
 // }
 
 
-// 3.
+// iii.
 // let i=0
 // do{
 //     console.log(ad)
@@ -80,14 +80,40 @@ let ad="Ceyhun"
 // }while(i<5);
 
 
-// 4.
-let i=0
-switch(i<5){
-    case true:
-        console.log(ad);
-        i++;
+// 4.  1 den 100 e  qeder olan butun ededlerin cemini tapan proqram yaz
+// let sum = 0
+// for(let i=0; i<5; i++){
+//     console.log(`${sum} + ${i} = ${sum+i}`)
+//     sum+=i
     
+// }
+
+
+// 5. 1 den 10-a qeder ededleri for dongusu ile bir sirada aralarinda "," olacag sekilde yazin
+// let num=""
+// for(let i=1; i<=10; i++){
+//     if(i!=10){
+//         num+=i + ", "
+//     }else{
+//         num+=i
+//     }
+// }
+// console.log(num)
+
+
+
+
+// 6.daxil edilen ededin faktorialini hesablayan proqram yazin
+
+let num=parseInt(prompt("eded daxil edin"))
+let fackt=1
+for(let i=1; i <= num; i++){
+    fackt = fackt * i
+    
+
 }
+alert(fackt)
+
 
 
 
