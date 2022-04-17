@@ -28,27 +28,67 @@
 // ededin reqemlerinin her ikisini bilerse mes: 75 yerine 57 yazarsa 500 manat qazansin:
 // ededin reqemlerinden birini duz bilerse 100 manat qazansin:
 
-while(true){
-    let num=Math.floor(Math.random()*100)
-    let user=prompt("size tesadufu verilmis ikireqemli ededi tapin:")
-    let numString=num.toString()
-    let userReverse=user[1]+user[0]
-    if(num<10){ 
-    num+=10
-    }
-    if(num==user){
-        alert("tebrikler siz tam dogru cavabi taparaq 1000 Azn qazandiniz")
-        break
-    }else if(num==userReverse){
-        alert("tebrikler siz verilen ededin her iki reqemini istifade etdiniz ve 500 Azn qazandiniz")
-        break
-    }else if(numString[0]==user[0] || numString[0]==user[1] || numString[1]==user[0] || numString[1]==user[1]){
-        alert("tebrikler siz verilen ededin reqemlerinde birini qeyd ederek 100 azn qazandiniz")
-        break
-    }else{
-        alert("YANLIS CAVAB.HEC BIR SERT ODENMIR")
-    }
+// while(true){
+//     let num=Math.floor(Math.random()*100)
+//     let user=prompt("size tesadufu verilmis ikireqemli ededi tapin:")
+//     let numString=num.toString()
+//     let userReverse=user[1]+user[0]
+//     if(num<10){ 
+//     num+=10
+//     }
+//     if(num==user){
+//         alert("tebrikler siz tam dogru cavabi taparaq 1000 Azn qazandiniz")
+//         break
+//     }else if(num==userReverse){
+//         alert("tebrikler siz verilen ededin her iki reqemini istifade etdiniz ve 500 Azn qazandiniz")
+//         break
+//     }else if(numString[0]==user[0] || numString[0]==user[1] || numString[1]==user[0] || numString[1]==user[1]){
+//         alert("tebrikler siz verilen ededin reqemlerinde birini qeyd ederek 100 azn qazandiniz")
+//         break
+//     }else{
+//         alert("YANLIS CAVAB.HEC BIR SERT ODENMIR")
+//     }
+// }
+
+
+
+
+// 4.butun donguler ile adinizi ekrana 5 defe yazdirin
+
+
+let ad="Ceyhun"
+
+
+// 1.
+// for(let i=0; i < 5; i++){
+//     console.log(ad)
+// }
+
+// 2.
+// let i=0
+// while(i<5){
+//     console.log(ad)
+//     i++
+// }
+
+
+// 3.
+// let i=0
+// do{
+//     console.log(ad)
+//     i++
+// }while(i<5);
+
+
+// 4.
+let i=0
+switch(i<5){
+    case true:
+        console.log(ad);
+        i++;
+    
 }
+
 
 
      
