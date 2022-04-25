@@ -181,16 +181,72 @@
 
 // 10. istifadeci muxtelif ededler daxil edir ve 0 daxil etdikde daxil edilen ededlerin hasilini gosterir(0  hasili hesabalnan ededlere daxil deyil).
 
-let hasil=1
-while(true){
-    let num=parseInt(prompt("eded daxil edin:"))
-    if(num != 0){
-        hasil=hasil*num
-    }else if(num==0){
-        alert(hasil)
-        break
+// let hasil=1
+// while(true){
+//     let num=parseInt(prompt("eded daxil edin:"))
+//     if(num != 0){
+//         hasil=hasil*num
+//     }else if(num==0){
+//         alert(hasil)
+//         break
+//     }
+// }
+
+
+// 11. istifadecinin daxil etdiyi edede qeder butun sade ededleri cap eden proqram yaz.mes(10: 2 3 5 7 )
+
+// let user = parseInt(prompt("eded daxil edin:"))
+// let sadeEdedler=""
+
+// for(let i=2; i<user; i++){
+//     let sade=true
+
+//     for(let j=2; j<i; j++){
+         
+//         if(i%j == 0){
+//             sade=false
+//             break
+//         }
+        
+//     }
+//     if(sade){
+//         sadeEdedler+=i + ", "
+//     }
+    
+
+// }
+// console.log(sadeEdedler);
+
+
+
+// 12.verilen listdeki objectleri id e gore tapin
+
+
+const men=[
+    {id:1, ad:"ceyhun1"},
+    {id:2, ad:"ceyhun2"},
+    {id:3, ad:"ceyhun3"},
+    {id:4, ad:"ceyhun4"},
+    {id:5, ad:"ceyhun5"},
+    {id:6, ad:"ceyhun6"},
+    {id:7, ad:"ceyhun7"},
+    {id:8, ad:"ceyhun8"},
+    {id:9, ad:"ceyhun9"},
+    {id:10, ad:"ceyhun10"}
+]
+
+function findMan(id){
+    for(let i=0; i < men.length; i++){
+ 
+        if(men[i].id==id){
+            return men[i]
+        }
+      
     }
 }
+const man = findMan(2)
+console.log(man)
+
 
 
 
