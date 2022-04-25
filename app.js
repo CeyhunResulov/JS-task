@@ -222,19 +222,22 @@
 // 12.verilen listdeki objectleri id e gore tapin
 
 
-const men=[
-    {id:1, ad:"ceyhun1"},
-    {id:2, ad:"ceyhun2"},
-    {id:3, ad:"ceyhun3"},
-    {id:4, ad:"ceyhun4"},
-    {id:5, ad:"ceyhun5"},
-    {id:6, ad:"ceyhun6"},
-    {id:7, ad:"ceyhun7"},
-    {id:8, ad:"ceyhun8"},
-    {id:9, ad:"ceyhun9"},
-    {id:10, ad:"ceyhun10"}
-]
+// const men=[
+//     {id:1, ad:"ceyhun1"},
+//     {id:2, ad:"ceyhun2"},
+//     {id:3, ad:"ceyhun3"},
+//     {id:4, ad:"ceyhun4"},
+//     {id:5, ad:"ceyhun5"},
+//     {id:6, ad:"ceyhun6"},
+//     {id:7, ad:"ceyhun7"},
+//     {id:8, ad:"ceyhun8"},
+//     {id:9, ad:"ceyhun9"},
+//     {id:10, ad:"ceyhun10"}
+// ]
 
+
+// oz usulum ile find methodu
+/*
 function findMan(id){
     for(let i=0; i < men.length; i++){
  
@@ -246,6 +249,91 @@ function findMan(id){
 }
 const man = findMan(2)
 console.log(man)
+*/
+
+// find metodu
+
+// const manName=men.find(function(man){
+//     return man.id===8
+// })
+
+
+
+// funksiyanin daha qisa yazilisi ile find metodu
+// const manName = men.find(man => man.id === 9)
+// console.log(manName)
+
+
+
+
+// 13. fiter metodu
+
+// const men=[
+//     {id:1, ad:"ceyhun1"},
+//     {id:1, ad:"ceyhun2"},
+//     {id:3, ad:"ceyhun3"},
+//     {id:3, ad:"ceyhun4"},
+//     {id:3, ad:"ceyhun5"},
+//     {id:3, ad:"ceyhun6"},
+//     {id:8, ad:"ceyhun7"},
+//     {id:8, ad:"ceyhun8"},
+//     {id:8, ad:"ceyhun9"},
+//     {id:8, ad:"ceyhun10"}
+// ]
+
+
+// const filterMethod = men.filter(function(man){
+//     return man.id === 8
+// })
+// console.log(filterMethod)
+
+
+
+
+
+// 14. moterizelerin duzgunluyunu yoxlayan kod yazin
+
+
+function duzgunMoterize(moterize){
+    const arrMoterize = moterize.split("")
+    const netice = arrMoterize.reduce(function(pre, curr){
+        console.log(pre, curr)
+        if( pre < 0){
+            return pre
+        }
+        if(curr === "("){
+            return ++pre
+        }
+        if(curr === ")"){
+            return --pre
+        }
+        return pre
+    },0)
+    if(!netice){
+        console.log("moterizeler duzgundur")
+    }else{
+        console.log("moterizeler duzgun deyil!")
+    }
+}
+duzgunMoterize("((())")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
