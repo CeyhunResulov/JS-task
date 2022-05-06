@@ -309,26 +309,71 @@ console.log(man)
 // console.log(cix(myList));
 // console.log(bol(myList));
 
-let myList = [1, 3, 5, 9];
+// optimallasdirma
+// let myList = [1, 3, 5, 9];
 
-const toplama = function cem(num) {
-  return num + 5;
-};
-const vurma = function vur(num) {
-  return num * 5;
-};
-const ferq = function cix(num) {
-  return num - 5;
-};
-const bolme = function bol(num) {
-  return num / 5;
-};
+// const toplama = function cem(num) {
+//   return num + 5;
+// };
+// const vurma = function vur(num) {
+//   return num * 5;
+// };
+// const ferq = function cix(num) {
+//   return num - 5;
+// };
+// const bolme = function bol(num) {
+//   return num / 5;
+// };
 
-function byCalculation(myList, calculation) {
-  newList = [];
-  for (let i = 0; i < myList.length; i++) {
-    newList[i] = calculation(myList[i]);
-  }
-  return newList;
+// function byCalculation(myList, calculation) {
+//   newList = [];
+//   for (let i = 0; i < myList.length; i++) {
+//     newList[i] = calculation(myList[i]);
+//   }
+//   return newList;
+// }
+// console.log(byCalculation(myList, toplama));
+
+// foreach
+
+// let myList = [1, 3, 4, 7, 8, 4];
+
+// myList.forEach(numGoster);
+
+// function numGoster(num, i) {
+//   console.log(num, i);
+// }
+
+// let myList = [1, 3, 4, 7, 8, 4];
+
+// numVeIndexGoster(myList, function test(num, index) {
+//   console.log(num, index);
+// });
+// function numVeIndexGoster(arr, callback) {
+//   for (let i = 0; i < myList.length; i++) {
+//     callback(arr[i], i);
+//   }
+// }
+
+// 16.
+
+const myList = [1, 2, 5, 7, 4, 26, 28, 33, 75];
+
+function tekEdedleriTap(arr) {
+  let oddnum = arr.filter(function (num, i) {
+    return num % 2 != 0;
+  });
+  console.log(oddnum);
+  let pow = oddnum.map(function kvadratinTap(num) {
+    return num * num;
+  });
+  console.log(pow);
+  let boyuk = pow.reduce(function muqayise(pre, curr) {
+    if (curr > 25) {
+      pre.push(curr);
+    }
+    return pre;
+  }, []);
+  console.log(boyuk);
 }
-console.log(byCalculation(myList, toplama));
+tekEdedleriTap(myList);
