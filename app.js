@@ -274,38 +274,61 @@ console.log(man)
 
 // 15. higher order function,callback function
 
-let myList = [1, 3, 5, 9];
-console.log(myList);
+// let myList = [1, 3, 5, 9];
 
-function topla(myList) {
+// function topla(myList) {
+//   newList = [];
+//   for (let i = 0; i < myList.length; i++) {
+//     newList[i] = myList[i] + 5;
+//   }
+//   return newList;
+// }
+// function vur(myList) {
+//   newList = [];
+//   for (let i = 0; i < myList.length; i++) {
+//     newList[i] = myList[i] * 5;
+//   }
+//   return newList;
+// }
+// function cix(myList) {
+//   newList = [];
+//   for (let i = 0; i < myList.length; i++) {
+//     newList[i] = myList[i] - 5;
+//   }
+//   return newList;
+// }
+// function bol(myList) {
+//   newList = [];
+//   for (let i = 0; i < myList.length; i++) {
+//     newList[i] = myList[i] / 5;
+//   }
+//   return newList;
+// }
+// console.log(topla(myList));
+// console.log(vur(myList));
+// console.log(cix(myList));
+// console.log(bol(myList));
+
+let myList = [1, 3, 5, 9];
+
+const toplama = function cem(num) {
+  return num + 5;
+};
+const vurma = function vur(num) {
+  return num * 5;
+};
+const ferq = function cix(num) {
+  return num - 5;
+};
+const bolme = function bol(num) {
+  return num / 5;
+};
+
+function byCalculation(myList, calculation) {
   newList = [];
   for (let i = 0; i < myList.length; i++) {
-    newList[i] = myList[i] + 5;
+    newList[i] = calculation(myList[i]);
   }
   return newList;
 }
-function vur(myList) {
-  newList = [];
-  for (let i = 0; i < myList.length; i++) {
-    newList[i] = myList[i] * 5;
-  }
-  return newList;
-}
-function cix(myList) {
-  newList = [];
-  for (let i = 0; i < myList.length; i++) {
-    newList[i] = myList[i] - 5;
-  }
-  return newList;
-}
-function bol(myList) {
-  newList = [];
-  for (let i = 0; i < myList.length; i++) {
-    newList[i] = myList[i] / 5;
-  }
-  return newList;
-}
-console.log(topla(myList));
-console.log(vur(myList));
-console.log(cix(myList));
-console.log(bol(myList));
+console.log(byCalculation(myList, toplama));
