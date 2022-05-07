@@ -357,21 +357,38 @@ console.log(man)
 
 // 16.
 
+// const myList = [1, 2, 5, 7, 4, 26, 28, 33, 75];
+
+// function getOperationNumbers(arr) {
+//   const oddnum = arr.filter((num) => num % 2 != 0);
+//   console.log(oddnum);
+
+//   const pow = oddnum.map((num) => num * num);
+//   console.log(pow);
+
+//   const selectNums = pow.reduce((pre, curr) => {
+//     if (curr > 25) {
+//       pre.push(curr);
+//     }
+//     return pre;
+//   }, []);
+//   console.log(selectNums);
+// }
+// getOperationNumbers(myList);
+
+// qisa versiyon
+
 const myList = [1, 2, 5, 7, 4, 26, 28, 33, 75];
 
 function getOperationNumbers(arr) {
-  const oddnum = arr.filter((num) => num % 2 != 0);
-  console.log(oddnum);
-
-  const pow = oddnum.map((num) => num * num);
-  console.log(pow);
-
-  const selectNums = pow.reduce((pre, curr) => {
-    if (curr > 25) {
-      pre.push(curr);
-    }
-    return pre;
-  }, []);
-  console.log(selectNums);
+  return arr
+    .filter((num) => num % 2 != 0)
+    .map((num) => num * num)
+    .reduce((pre, curr) => {
+      if (curr > 25) {
+        pre.push(curr);
+      }
+      return pre;
+    }, []);
 }
-getOperationNumbers(myList);
+console.log(getOperationNumbers(myList));
