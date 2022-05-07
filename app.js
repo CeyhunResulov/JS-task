@@ -378,17 +378,106 @@ console.log(man)
 
 // qisa versiyon
 
-const myList = [1, 2, 5, 7, 4, 26, 28, 33, 75];
+// const myList = [1, 2, 5, 7, 4, 26, 28, 33, 75];
 
-function getOperationNumbers(arr) {
-  return arr
-    .filter((num) => num % 2 != 0)
-    .map((num) => num * num)
-    .reduce((pre, curr) => {
-      if (curr > 25) {
-        pre.push(curr);
-      }
-      return pre;
-    }, []);
+// function getOperationNumbers(arr) {
+//   return arr
+//     .filter((num) => num % 2 != 0)
+//     .map((num) => num * num)
+//     .reduce((pre, curr) => {
+//       if (curr > 25) {
+//         pre.push(curr);
+//       }
+//       return pre;
+//     }, []);
+// }
+// console.log(getOperationNumbers(myList));
+
+// 17
+
+// const citys = [
+//   { nameCity: "Baki", num: 99 },
+//   { nameCity: "masalli", num: 45 },
+//   { nameCity: "Celilebad", num: 15 },
+//   { nameCity: "Agsu", num: 54 },
+//   { nameCity: "Lenkeran,", num: 75 },
+// ];
+
+// function getSortForName(citys) {
+//   let newSort = Array.from(citys);
+//   return newSort
+//     .sort(function (a, b) {
+//       if (a.nameCity > b.nameCity) {
+//         return 1;
+//       }
+//       if (a.nameCity < b.nameCity) {
+//         return -1;
+//       }
+//       if (a.nameCity == b.nameCity) {
+//         return 0;
+//       }
+//     })
+//     .reverse();
+// }
+// console.log(getSortForName(citys));
+
+// 18
+
+// let user = 5;
+// const arr = [];
+// for (let i = 1; i < user + 1; i++) {
+//   arr.push(i);
+// }
+// let newArr = [0, 1];
+
+// for (let i = 0; i < 6; i++) {
+//   function reduceMetod(arr) {
+//     arr.reduce(function (pre, curr, i) {
+//       i += parseInt(newArr.length);
+//       console.log(newArr.push(newArr[i] + newArr[i + 1]));
+//     }, 0);
+//   }
+//   reduceMetod([newArr]);
+//   console.log(newArr);
+// }
+// console.log(newArr.length);
+
+// 19
+
+const students = [
+  { id: 2, firstname: "Ceyhun", lastname: "Resulov" },
+  { id: 1, firstname: "Ferhad", lastname: "Salmanov" },
+  { id: 5, firstname: "Yusif", lastname: "Velizade" },
+  { id: 3, firstname: "Resad", lastname: "Huseynov" },
+  { id: 6, firstname: "Hezret", lastname: "Gulverdiyev" },
+  { id: 4, firstname: "Asif", lastname: "Qafarli" },
+];
+
+/*function operationOnArray(students) {
+  const evenId = students.filter(function (obj) {
+    return obj.id % 2 === 0;
+  });
+  console.log(evenId);
+
+  const student = [];
+  evenId.map(function (obj) {
+    student.push(obj.firstname + " " + obj.lastname);
+    return student.sort();
+  });
+  return student;
 }
-console.log(getOperationNumbers(myList));
+console.log(operationOnArray(students));
+*/
+
+// qisaldilmis versiyon
+function operationOnArray(students) {
+  const student = [];
+  students
+    .filter((obj) => obj.id % 2 === 0)
+    .map((obj) => {
+      student.push(obj.firstname + " " + obj.lastname);
+      return student.sort();
+    });
+  return student;
+}
+console.log(operationOnArray(students));
