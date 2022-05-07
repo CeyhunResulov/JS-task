@@ -359,21 +359,19 @@ console.log(man)
 
 const myList = [1, 2, 5, 7, 4, 26, 28, 33, 75];
 
-function tekEdedleriTap(arr) {
-  let oddnum = arr.filter(function (num, i) {
-    return num % 2 != 0;
-  });
+function getOperationNumbers(arr) {
+  const oddnum = arr.filter((num) => num % 2 != 0);
   console.log(oddnum);
-  let pow = oddnum.map(function kvadratinTap(num) {
-    return num * num;
-  });
+
+  const pow = oddnum.map((num) => num * num);
   console.log(pow);
-  let boyuk = pow.reduce(function muqayise(pre, curr) {
+
+  const selectNums = pow.reduce((pre, curr) => {
     if (curr > 25) {
       pre.push(curr);
     }
     return pre;
   }, []);
-  console.log(boyuk);
+  console.log(selectNums);
 }
-tekEdedleriTap(myList);
+getOperationNumbers(myList);
