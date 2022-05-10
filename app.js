@@ -423,35 +423,38 @@ console.log(man)
 
 // 18
 
-// let user = 5;
+// let user = 15;
 // const arr = [];
-// for (let i = 1; i < user + 1; i++) {
+// for (let i = 1; i <= user; i++) {
 //   arr.push(i);
 // }
-// let newArr = [0, 1];
 
-// for (let i = 0; i < 6; i++) {
-//   function reduceMetod(arr) {
-//     arr.reduce(function (pre, curr, i) {
-//       i += parseInt(newArr.length);
-//       console.log(newArr.push(newArr[i] + newArr[i + 1]));
-//     }, 0);
-//   }
-//   reduceMetod([newArr]);
+// function reduceMetod(arr) {
+//   const newArr = [];
+//   let x = 0;
+//   let y = 1;
+//   let c = 0;
+//   arr.reduce(function (pre, curr, index) {
+//     console.log(x, y, c);
+//     c = y;
+//     y = x;
+//     newArr.push(x);
+//     x = y + c;
+//   }, 0);
 //   console.log(newArr);
 // }
-// console.log(newArr.length);
+// reduceMetod(arr);
 
 // 19
 
-const students = [
-  { id: 2, firstname: "Ceyhun", lastname: "Resulov" },
-  { id: 1, firstname: "Ferhad", lastname: "Salmanov" },
-  { id: 5, firstname: "Yusif", lastname: "Velizade" },
-  { id: 3, firstname: "Resad", lastname: "Huseynov" },
-  { id: 6, firstname: "Hezret", lastname: "Gulverdiyev" },
-  { id: 4, firstname: "Asif", lastname: "Qafarli" },
-];
+// const students = [
+//   { id: 2, firstname: "Ceyhun", lastname: "Resulov" },
+//   { id: 1, firstname: "Ferhad", lastname: "Salmanov" },
+//   { id: 5, firstname: "Yusif", lastname: "Velizade" },
+//   { id: 3, firstname: "Resad", lastname: "Huseynov" },
+//   { id: 6, firstname: "Hezret", lastname: "Gulverdiyev" },
+//   { id: 4, firstname: "Asif", lastname: "Qafarli" },
+// ];
 
 /*function operationOnArray(students) {
   const evenId = students.filter(function (obj) {
@@ -470,14 +473,17 @@ console.log(operationOnArray(students));
 */
 
 // qisaldilmis versiyon
-function operationOnArray(students) {
-  const student = [];
-  students
-    .filter((obj) => obj.id % 2 === 0)
-    .map((obj) => {
-      student.push(obj.firstname + " " + obj.lastname);
-      return student.sort();
-    });
-  return student;
-}
-console.log(operationOnArray(students));
+// function operationOnArray(students) {
+//   const student = [];
+//   students
+//     .filter((obj) => obj.id % 2 === 0)
+//     .map((obj) => {
+//       student.push(obj.firstname + " " + obj.lastname);
+//       return student.sort();
+//     });
+//   return student;
+// }
+// console.log(operationOnArray(students));
+
+const a = window;
+console.log(window.document.body);
