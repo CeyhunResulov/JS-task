@@ -42,18 +42,42 @@ const button = document.querySelector(".link");
 //   button.style.background = "none";
 //   e.preventDefault();
 // }
-button.parentElement.addEventListener("mousemove", getGradientColor);
-const appItem = document.createElement("p");
-button.parentElement.appendChild(appItem);
-console.log(appItem);
+// button.parentElement.addEventListener("mousemove", getGradientColor);
+// const appItem = document.createElement("p");
+// button.parentElement.appendChild(appItem);
+// console.log(appItem);
 
-function getGradientColor(e) {
-  let r = e.clientX;
-  let g = e.clientY;
-  let b = r + g;
-  appItem.textContent = `R:${r} G:${g} B:${b}`;
-  button.parentElement.style.background = `rgb(${r % 255},${g % 255},${
-    b % 255
-  })`;
+// function getGradientColor(e) {
+//   let r = e.clientX;
+//   let g = e.clientY;
+//   let b = r + g;
+//   appItem.textContent = `R:${r} G:${g} B:${b}`;
+//   button.parentElement.style.background = `rgb(${r % 255},${g % 255},${
+//     b % 255
+//   })`;
+//   e.preventDefault();
+// }
+
+// form eventleri
+
+const myForm = document.querySelector("#form");
+const nameInput = document.querySelector("#name");
+const citys = document.querySelector("#citys");
+// const title = document.querySelector("#title");
+// const desc = document.querySelector("#name");
+// myForm.addEventListener("submit", showEvent)
+// nameInput.addEventListener("keydown", showEvent);
+// nameInput.addEventListener("keyup", showEvent);
+// nameInput.addEventListener("focus", showEvent);
+// nameInput.addEventListener("blur", showEvent);
+// nameInput.addEventListener("cut", showEvent);
+// nameInput.addEventListener("paste", showEvent);
+// nameInput.addEventListener("input", showEvent);
+citys.addEventListener("change", showEvent);
+
+function showEvent(e) {
+  // title.textContent = desc.value;
+  console.log(e.target.value);
+  console.log("event name:" + e.type);
   e.preventDefault();
 }

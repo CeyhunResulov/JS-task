@@ -15,3 +15,13 @@
   display: block;
   border: 2px solid black;
 }
+form {
+  border: 1px solid orange;
+  margin: 100px;
+}
+#name,
+#button,
+#reset,
+#submit {
+  margin-bottom: 10px;
+}
