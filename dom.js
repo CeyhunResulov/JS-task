@@ -24,7 +24,7 @@ console.log(newtitle);
 
 // addEventListiner
 
-const button = document.querySelector(".link");
+// const button = document.querySelector(".link");
 // button.addEventListener("click", backgroundUptdate);
 // button.addEventListener("dblclick", backgroundUptdate);
 // button.parentElement.addEventListener("mouseover", backgroundItemReplace);
@@ -60,24 +60,62 @@ const button = document.querySelector(".link");
 
 // form eventleri
 
-const myForm = document.querySelector("#form");
-const nameInput = document.querySelector("#name");
-const citys = document.querySelector("#citys");
-// const title = document.querySelector("#title");
-// const desc = document.querySelector("#name");
-// myForm.addEventListener("submit", showEvent)
-// nameInput.addEventListener("keydown", showEvent);
-// nameInput.addEventListener("keyup", showEvent);
-// nameInput.addEventListener("focus", showEvent);
-// nameInput.addEventListener("blur", showEvent);
-// nameInput.addEventListener("cut", showEvent);
-// nameInput.addEventListener("paste", showEvent);
-// nameInput.addEventListener("input", showEvent);
-citys.addEventListener("change", showEvent);
+// const myForm = document.querySelector("#form");
+// const nameInput = document.querySelector("#name");
+// const citys = document.querySelector("#citys");
+// // const title = document.querySelector("#title");
+// // const desc = document.querySelector("#name");
+// // myForm.addEventListener("submit", showEvent)
+// // nameInput.addEventListener("keydown", showEvent);
+// // nameInput.addEventListener("keyup", showEvent);
+// // nameInput.addEventListener("focus", showEvent);
+// // nameInput.addEventListener("blur", showEvent);
+// // nameInput.addEventListener("cut", showEvent);
+// // nameInput.addEventListener("paste", showEvent);
+// // nameInput.addEventListener("input", showEvent);
+// citys.addEventListener("change", showEvent);
 
-function showEvent(e) {
-  // title.textContent = desc.value;
-  console.log(e.target.value);
-  console.log("event name:" + e.type);
+// function showEvent(e) {
+//   // title.textContent = desc.value;
+//   console.log(e.target.value);
+//   console.log("event name:" + e.type);
+//   e.preventDefault();
+// }
+
+// local storage & session storage
+
+// localStorage.setItem("fname", "ceyhun");
+// localStorage.setItem("lname", "resulov");
+
+// sessionStorage.setItem("fname", "ceyhun");
+// sessionStorage.setItem("lname", "resulov");
+
+const myForm = document.querySelector("#form");
+const parentItem = document.querySelector(".parent__item");
+
+const a = JSON.parse(localStorage.getItem("itemList"));
+a.forEach((nameItem) => {
+  const newItem = document.createElement("li");
+  newItem.textContent = nameItem;
+  parentItem.appendChild(newItem);
+});
+
+myForm.addEventListener("submit", creatNewItem);
+function creatNewItem(e) {
+  const newInput = document.querySelector("#name").value;
+  let nameList;
+  if (localStorage.getItem("itemList") === null) {
+    nameList = [];
+  } else {
+    nameList = JSON.parse(localStorage.getItem("itemList"));
+  }
+  nameList.push(newInput);
+  localStorage.setItem("itemList", JSON.stringify(nameList));
+  const newItem = document.createElement("li");
+  const a = JSON.parse(localStorage.getItem("itemList"));
+
+  newItem.textContent = newInput;
+  parentItem.appendChild(newItem);
+
   e.preventDefault();
 }
