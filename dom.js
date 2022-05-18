@@ -90,32 +90,35 @@ console.log(newtitle);
 // sessionStorage.setItem("fname", "ceyhun");
 // sessionStorage.setItem("lname", "resulov");
 
-const myForm = document.querySelector("#form");
-const parentItem = document.querySelector(".parent__item");
+// const myForm = document.querySelector("#form");
+// const parentItem = document.querySelector(".parent__item");
+// const a = JSON.parse(localStorage.getItem("itemList"));
+// a.forEach((nameItem) => {
+//   const newItem = document.createElement("li");
+//   newItem.textContent = nameItem;
+//   parentItem.appendChild(newItem);
+// });
 
-const a = JSON.parse(localStorage.getItem("itemList"));
-a.forEach((nameItem) => {
-  const newItem = document.createElement("li");
-  newItem.textContent = nameItem;
-  parentItem.appendChild(newItem);
-});
+// myForm.addEventListener("submit", creatNewItem);
+// function creatNewItem(e) {
+//   const newInput = document.querySelector("#name").value;
+//   let nameList;
+//   if (localStorage.getItem("itemList") === null) {
+//     nameList = [];
+//   } else {
+//     nameList = JSON.parse(localStorage.getItem("itemList"));
+//   }
+//   nameList.push(newInput);
+//   localStorage.setItem("itemList", JSON.stringify(nameList));
+//   const newItem = document.createElement("li");
+//   const a = JSON.parse(localStorage.getItem("itemList"));
 
-myForm.addEventListener("submit", creatNewItem);
-function creatNewItem(e) {
-  const newInput = document.querySelector("#name").value;
-  let nameList;
-  if (localStorage.getItem("itemList") === null) {
-    nameList = [];
-  } else {
-    nameList = JSON.parse(localStorage.getItem("itemList"));
-  }
-  nameList.push(newInput);
-  localStorage.setItem("itemList", JSON.stringify(nameList));
-  const newItem = document.createElement("li");
-  const a = JSON.parse(localStorage.getItem("itemList"));
+//   newItem.textContent = newInput;
+//   parentItem.appendChild(newItem);
 
-  newItem.textContent = newInput;
-  parentItem.appendChild(newItem);
+//   e.preventDefault();
+// }
 
-  e.preventDefault();
-}
+const text = "bdcskgwaaafggkjg";
+const arrText = text.split("");
+console.log(arrText.sort().reverse());
