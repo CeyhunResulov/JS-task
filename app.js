@@ -485,5 +485,9 @@ console.log(operationOnArray(students));
 // }
 // console.log(operationOnArray(students));
 
-const a = window;
-console.log(window.document.body);
+// const a = window;
+// console.log(window.document.body);
+
+const text = "bdcskgwaaafggkjg";
+const arrText = text.split("");
+console.log(arrText.sort().reverse());

@@ -118,7 +118,3 @@ console.log(newtitle);
 
 //   e.preventDefault();
 // }
-
-const text = "bdcskgwaaafggkjg";
-const arrText = text.split("");
-console.log(arrText.sort().reverse());
