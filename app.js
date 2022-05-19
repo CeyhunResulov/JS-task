@@ -488,6 +488,21 @@ console.log(operationOnArray(students));
 // const a = window;
 // console.log(window.document.body);
 
-const text = "bdcskgwaaafggkjg";
-const arrText = text.split("");
-console.log(arrText.sort().reverse());
+// const text = "bdcskgwaaafggkjg";
+// const arrText = text.split("");
+// console.log(arrText.sort().reverse());
+
+// object
+
+const ceyhun = {
+  fname: "ceyhun",
+  lname: "resulov",
+  work: false,
+  edu: ["bakalavr", "magistr"],
+  address: { country: "Azerbaijan", city: "baku" },
+  showInfomation: function () {
+    return "hello world";
+  },
+};
+
+console.log(ceyhun.edu[1]);
