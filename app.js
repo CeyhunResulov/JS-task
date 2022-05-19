@@ -494,15 +494,35 @@ console.log(operationOnArray(students));
 
 // object
 
-const ceyhun = {
-  fname: "ceyhun",
-  lname: "resulov",
-  work: false,
-  edu: ["bakalavr", "magistr"],
-  address: { country: "Azerbaijan", city: "baku" },
-  showInfomation: function () {
-    return "hello world";
-  },
-};
+// const ceyhun = {
+//   fname: "ceyhun",
+//   lname: "resulov",
+//   work: false,
+//   edu: ["bakalavr", "magistr"],
+//   address: { country: "Azerbaijan", city: "baku" },
+//   showInfomation: function () {
+//     return "hello world";
+//   },
+//   ["full-name"]: "ceyhun resulov",
+// };
 
-console.log(ceyhun.edu[1]);
+// console.log(ceyhun["full-name"]);
+
+// factory functions
+const ceyhun = studentsCreatObject("ceyhun", 22, "Baku", "AzTU");
+const ferhad = studentsCreatObject("ferhad", 21, "Agdam", "APU");
+
+function studentsCreatObject(name, year, country, edu) {
+  return {
+    name: name,
+    year: year,
+    address: country,
+    education: edu,
+    showInfo: function () {
+      return `i am ${name} and ${year} year old.`;
+    },
+  };
+}
+
+console.log(ceyhun.showInfo());
+console.log(ferhad.showInfo());
