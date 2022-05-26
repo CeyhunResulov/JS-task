@@ -509,20 +509,30 @@ console.log(operationOnArray(students));
 // console.log(ceyhun["full-name"]);
 
 // factory functions
-const ceyhun = studentsCreatObject("ceyhun", 22, "Baku", "AzTU");
-const ferhad = studentsCreatObject("ferhad", 21, "Agdam", "APU");
+// const ceyhun = studentsCreatObject("ceyhun", 22, "Baku", "AzTU");
+// const ferhad = studentsCreatObject("ferhad", 21, "Agdam", "APU");
 
-function studentsCreatObject(name, year, country, edu) {
-  return {
-    name: name,
-    year: year,
-    address: country,
-    education: edu,
-    showInfo: function () {
-      return `i am ${name} and ${year} year old.`;
-    },
-  };
-}
+// function studentsCreatObject(name, year, country, edu) {
+//   return {
+//     name: name,
+//     year: year,
+//     address: country,
+//     education: edu,
+//     showInfo: function () {
+//       return `i am ${name} and ${year} year old.`;
+//     },
+//   };
+// }
 
-console.log(ceyhun.showInfo());
-console.log(ferhad.showInfo());
+// console.log(ceyhun.showInfo());
+// console.log(ferhad.showInfo());
+
+console.log(renk);
+var renk = "mavi";
+console.log(rengiSoyle);
+var rengiSoyle = function () {
+  console.log("en sevdigim renk: " + renk);
+
+  var renk = "yesil";
+  console.log("simdi en sevdigim renk: " + renk);
+};
