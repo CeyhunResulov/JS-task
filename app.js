@@ -527,12 +527,116 @@ console.log(operationOnArray(students));
 // console.log(ceyhun.showInfo());
 // console.log(ferhad.showInfo());
 
-console.log(renk);
-var renk = "mavi";
-console.log(rengiSoyle);
-var rengiSoyle = function () {
-  console.log("en sevdigim renk: " + renk);
+// console.log(renk);
+// var renk = "mavi";
+// rengiSoyle()
+// var rengiSoyle = function () {
+//   console.log("en sevdigim renk: " + renk);
 
-  var renk = "yesil";
-  console.log("simdi en sevdigim renk: " + renk);
-};
+//   var renk = "yesil";
+//   console.log("simdi en sevdigim renk: " + renk);
+// };
+
+//bitwise functions
+
+// bitwiseAND
+
+// function bitwiseAND(n1, n2) {
+//   const firstNum = Array.from(n1.toString(2));
+//   const secondNum = Array.from(n2.toString(2));
+//   const result = [];
+//   for (let index = 0; index < firstNum.length; index++) {
+//     if (firstNum.length > secondNum.length) {
+//       secondNum.unshift("0");
+//     } else if (firstNum.length < secondNum.length) {
+//       firstNum.unshift("0");
+//     } else if (firstNum.length == secondNum.length) {
+//       for (let i = 0; i < firstNum.length; i++) {
+//         if ((firstNum[i] === secondNum[i]) & (secondNum[i] == 1)) {
+//           result.push("1");
+//         } else {
+//           result.push("0");
+//         }
+//       }
+//       break;
+//     }
+//   }
+//   let bitwiseNum = "";
+//   result.forEach((n) => {
+//     bitwiseNum += n;
+//   });
+//   console.log(firstNum);
+//   console.log(secondNum);
+//   console.log(result);
+//   console.log(parseInt(bitwiseNum, 2));
+//   return parseInt(bitwiseNum, 2);
+// }
+// bitwiseAND(2, 7);
+
+// bitwiseOR
+// function bitwiseOR(n1, n2) {
+//   const firstNum = Array.from(n1.toString(2));
+//   const secondNum = Array.from(n2.toString(2));
+//   const result = [];
+//   for (let index = 0; index < firstNum.length; index++) {
+//     if (firstNum.length > secondNum.length) {
+//       secondNum.unshift("0");
+//     } else if (firstNum.length < secondNum.length) {
+//       firstNum.unshift("0");
+//     } else if (firstNum.length == secondNum.length) {
+//       for (let i = 0; i < firstNum.length; i++) {
+//         if ((firstNum[i] == 0) & (secondNum[i] == 0)) {
+//           result.push("0");
+//         } else {
+//           result.push("1");
+//         }
+//       }
+//       break;
+//     }
+//   }
+//   let bitwiseNum = "";
+//   result.forEach((n) => {
+//     bitwiseNum += n;
+//   });
+//   console.log(firstNum);
+//   console.log(secondNum);
+//   console.log(result);
+//   console.log(parseInt(bitwiseNum, 2));
+//   return parseInt(bitwiseNum, 2);
+// }
+// bitwiseOR(8, 7);
+
+// bitwiseXOR
+function bitwiseXOR(n1, n2) {
+  const firstNum = Array.from(n1.toString(2));
+  const secondNum = Array.from(n2.toString(2));
+  const result = [];
+  for (let index = 0; index < firstNum.length; index++) {
+    if (firstNum.length > secondNum.length) {
+      secondNum.unshift("0");
+    } else if (firstNum.length < secondNum.length) {
+      firstNum.unshift("0");
+    } else if (firstNum.length == secondNum.length) {
+      for (let i = 0; i < firstNum.length; i++) {
+        if (firstNum[i] === secondNum[i]) {
+          result.push("0");
+        } else {
+          result.push("1");
+        }
+      }
+      break;
+    }
+  }
+  let bitwiseNum = "";
+  result.forEach((n) => {
+    bitwiseNum += n;
+  });
+  console.log(firstNum);
+  console.log(secondNum);
+  console.log(result);
+  console.log(parseInt(bitwiseNum, 2));
+  return parseInt(bitwiseNum, 2);
+}
+bitwiseXOR(8, 7);
+console.log("******************************");
+console.log(8 ^ 7);
