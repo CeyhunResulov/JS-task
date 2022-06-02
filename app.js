@@ -607,36 +607,46 @@ console.log(operationOnArray(students));
 // bitwiseOR(8, 7);
 
 // bitwiseXOR
-function bitwiseXOR(n1, n2) {
-  const firstNum = Array.from(n1.toString(2));
-  const secondNum = Array.from(n2.toString(2));
-  const result = [];
-  for (let index = 0; index < firstNum.length; index++) {
-    if (firstNum.length > secondNum.length) {
-      secondNum.unshift("0");
-    } else if (firstNum.length < secondNum.length) {
-      firstNum.unshift("0");
-    } else if (firstNum.length == secondNum.length) {
-      for (let i = 0; i < firstNum.length; i++) {
-        if (firstNum[i] === secondNum[i]) {
-          result.push("0");
-        } else {
-          result.push("1");
-        }
-      }
-      break;
-    }
+// function bitwiseXOR(n1, n2) {
+//   const firstNum = Array.from(n1.toString(2));
+//   const secondNum = Array.from(n2.toString(2));
+//   const result = [];
+//   for (let index = 0; index < firstNum.length; index++) {
+//     if (firstNum.length > secondNum.length) {
+//       secondNum.unshift("0");
+//     } else if (firstNum.length < secondNum.length) {
+//       firstNum.unshift("0");
+//     } else if (firstNum.length == secondNum.length) {
+//       for (let i = 0; i < firstNum.length; i++) {
+//         if (firstNum[i] === secondNum[i]) {
+//           result.push("0");
+//         } else {
+//           result.push("1");
+//         }
+//       }
+//       break;
+//     }
+//   }
+//   let bitwiseNum = "";
+//   result.forEach((n) => {
+//     bitwiseNum += n;
+//   });
+//   console.log(firstNum);
+//   console.log(secondNum);
+//   console.log(result);
+//   console.log(parseInt(bitwiseNum, 2));
+//   return parseInt(bitwiseNum, 2);
+// }
+// bitwiseXOR(8, 7);
+// console.log("******************************");
+// console.log(8 ^ 7);
+
+// new task
+function addUp(num) {
+  let result = 0;
+  for (let i = 1; i <= num; i++) {
+    result += i;
   }
-  let bitwiseNum = "";
-  result.forEach((n) => {
-    bitwiseNum += n;
-  });
-  console.log(firstNum);
-  console.log(secondNum);
-  console.log(result);
-  console.log(parseInt(bitwiseNum, 2));
-  return parseInt(bitwiseNum, 2);
+  return result;
 }
-bitwiseXOR(8, 7);
-console.log("******************************");
-console.log(8 ^ 7);
+console.log(addUp(3));
