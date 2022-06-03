@@ -642,11 +642,17 @@ console.log(operationOnArray(students));
 // console.log(8 ^ 7);
 
 // new task
-function addUp(num) {
-  let result = 0;
-  for (let i = 1; i <= num; i++) {
-    result += i;
-  }
-  return result;
+// function addUp(num) {
+//   let result = 0;
+//   for (let i = 1; i <= num; i++) {
+//     result += i;
+//   }
+//   return result;
+// }
+// console.log(addUp(3));
+
+// new task
+function matchesHouse(step) {
+  return step > 0 ? step * 5 + 1 : 0;
 }
-console.log(addUp(3));
+console.log(matchesHouse(8));
