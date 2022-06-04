@@ -652,7 +652,20 @@ console.log(operationOnArray(students));
 // console.log(addUp(3));
 
 // new task
-function matchesHouse(step) {
-  return step > 0 ? step * 5 + 1 : 0;
+// function matchesHouse(step) {
+//   return step > 0 ? step * 5 + 1 : 0;
+// }
+// console.log(matchesHouse(8));
+
+function shiftToLeft(x, y) {
+  let a = 1;
+  for (let i = 1; i <= y; i++) {
+    a = a * 2;
+  }
+  return x * a;
 }
-console.log(matchesHouse(8));
+
+function shiftToLeft(x, y) {
+  return x * 2 ** y;
+}
+console.log(shiftToLeft(-32, 2));
