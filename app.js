@@ -657,15 +657,25 @@ console.log(operationOnArray(students));
 // }
 // console.log(matchesHouse(8));
 
-function shiftToLeft(x, y) {
-  let a = 1;
-  for (let i = 1; i <= y; i++) {
-    a = a * 2;
-  }
-  return x * a;
-}
+// function shiftToLeft(x, y) {
+//   let a = 1;
+//   for (let i = 1; i <= y; i++) {
+//     a = a * 2;
+//   }
+//   return x * a;
+// }
 
-function shiftToLeft(x, y) {
-  return x * 2 ** y;
+// function shiftToLeft(x, y) {
+//   return x * 2 ** y;
+// }
+// console.log(shiftToLeft(-32, 2));
+
+// function minMax(arr) {
+//   return [Math.min(...arr), Math.max(...arr)];
+// }
+// console.log(minMax([1, 3, 7, 9]));
+
+function timeForMilkAndCookies(date) {
+  return date.getDate() === 24 && date.getMonth() === 11 ? true : false;
 }
-console.log(shiftToLeft(-32, 2));
+console.log(timeForMilkAndCookies(new Date(2000, 11, 24)));
