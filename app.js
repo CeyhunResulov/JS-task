@@ -675,7 +675,18 @@ console.log(operationOnArray(students));
 // }
 // console.log(minMax([1, 3, 7, 9]));
 
-function timeForMilkAndCookies(date) {
-  return date.getDate() === 24 && date.getMonth() === 11 ? true : false;
+// new task
+// function timeForMilkAndCookies(date) {
+//   return date.getDate() === 24 && date.getMonth() === 11 ? true : false;
+// }
+// console.log(timeForMilkAndCookies(new Date(2000, 11, 24)));
+
+function whichIsLarger(f, g) {
+  return f() > g() ? "f" : f() < g() ? "g" : "neighter";
 }
-console.log(timeForMilkAndCookies(new Date(2000, 11, 24)));
+console.log(
+  whichIsLarger(
+    () => 5,
+    () => 10
+  )
+);
