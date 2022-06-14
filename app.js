@@ -681,12 +681,33 @@ console.log(operationOnArray(students));
 // }
 // console.log(timeForMilkAndCookies(new Date(2000, 11, 24)));
 
-function whichIsLarger(f, g) {
-  return f() > g() ? "f" : f() < g() ? "g" : "neighter";
-}
-console.log(
-  whichIsLarger(
-    () => 5,
-    () => 10
-  )
-);
+// function whichIsLarger(f, g) {
+//   return f() > g() ? "f" : f() < g() ? "g" : "neighter";
+// }
+// console.log(
+//   whichIsLarger(
+//     () => 5,
+//     () => 10
+//   )
+// );
+
+// onluqdan ikilik edede kecid
+
+// function numTypChange(a) {
+//   let b = [];
+//   while (a >= 1) {
+//     if (a % 2 == 0) {
+//       a = parseInt(a / 2);
+//       b.unshift(0);
+//     } else if (a % 2 == 1) {
+//       a = parseInt(a / 2);
+//       b.unshift(1);
+//     }
+//   }
+//   number = "";
+//   for (i of b) {
+//     number += i;
+//   }
+//   return number;
+// }
+// console.log(numTypChange(8));
