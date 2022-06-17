@@ -712,27 +712,36 @@ console.log(operationOnArray(students));
 // }
 // console.log(numTypChange(8));
 
+// function canNest(arr1, arr2) {
+//   let test = null;
+//   arr1.forEach((num1) => {
+//     arr2.forEach((num2) => {
+//       if (num1 == num2) {
+//         test = false;
+//         return test;
+//       }
+//     });
+//   });
+//   if (
+//     (arr1[0] > arr2[0] &&
+//       arr1[arr1.length - 1] < arr2[arr2.length - 1] &&
+//       test != false) ||
+//     (arr1[0] < arr2[0] &&
+//       arr1[arr1.length - 1] > arr2[arr2.length - 1] &&
+//       test != false)
+//   ) {
+//     test = true;
+//     return true;
+//   }
+//   return test;
+// }
+
 function canNest(arr1, arr2) {
-  let test = null;
-  arr1.forEach((num1) => {
-    arr2.forEach((num2) => {
-      if (num1 == num2) {
-        test = false;
-        return test;
-      }
-    });
-  });
-  if (
-    (arr1[0] > arr2[0] &&
-      arr1[arr1.length - 1] < arr2[arr2.length - 1] &&
-      test != false) ||
-    (arr1[0] < arr2[0] &&
-      arr1[arr1.length - 1] > arr2[arr2.length - 1] &&
-      test != false)
-  ) {
-    test = true;
-    return true;
-  }
-  return test;
+  return (
+    Math.min(...arr1) > Math.min(...arr2) &&
+    Math.max(...arr1) < Math.max(...arr2)
+  );
 }
 console.log(canNest([9, 9, 8], [8, 9, 10]));
+
+console.log("hello world");
